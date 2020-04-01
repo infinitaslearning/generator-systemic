@@ -45,8 +45,9 @@ steps:
       testResultsFiles: '**/test-*.xml'
       failTaskOnFailedTests: true
 
-    - task: SonarQubePrepare@4
+  - task: SonarQubePrepare@4
     displayName: 'sonarqube: prepare analysis'
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
     inputs:
       SonarQube: 'infinitas-sonarqube'
       scannerMode: 'CLI'
@@ -63,9 +64,11 @@ steps:
 
   - task: SonarQubeAnalyze@4
     displayName: 'sonarqube: run analysis'
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
 
   - task: SonarQubePublish@4
     displayName: 'sonarqube: publish analysis'
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
     inputs:
       pollingTimeoutSec: '300'
 
