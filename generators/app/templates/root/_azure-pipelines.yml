@@ -11,7 +11,7 @@ steps:
       workingFile: .npmrc
 
   - task: Docker@2
-    displayName: 'Build Docker image'
+    displayName: 'docker: build image'
     inputs:
       containerRegistry: 'ACR Connection'
       repository: $(Build.Repository.Name)
@@ -36,10 +36,10 @@ steps:
       echo "ERROR_UP=$ERROR_UP"
       echo "ERROR_DOWN=$ERROR_DOWN"
     failOnStderr: true                        
-    displayName: 'run tests and generate reports'
+    displayName: 'test: execute'
 
   - task: PublishTestResults@2
-    displayName: 'Publish Test Results **/test-*.xml'
+    displayName: 'test: publish report'
     inputs:
       testResultsFormat: 'JUnit'
       testResultsFiles: '**/test-*.xml'
@@ -70,7 +70,7 @@ steps:
       pollingTimeoutSec: '300'
 
   - task: Docker@2
-    displayName: push
+    displayName: 'docker: push image'
     inputs:
       containerRegistry: 'Docker Registry'
       repository:  $(Build.Repository.Name)
