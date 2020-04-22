@@ -54,7 +54,7 @@ steps:
       SonarQube: 'infinitas-sonarqube'
       scannerMode: 'CLI'
       configMode: 'manual'
-      cliProjectKey: $(Build.Repository.Name) 
+      cliProjectKey: <%= name %>
       cliProjectName: $(Build.Repository.Name)
       cliSources: '.'
       extraProperties: |
