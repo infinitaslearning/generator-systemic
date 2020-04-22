@@ -19,6 +19,12 @@ module.exports = yeoman.Base.extend({
       name    : 'description',
       message : 'A brief description',
       default : ''
+    },
+    {
+      type    : 'input',
+      name    : 'projectcontainerregistry',
+      message : 'Your project\'s container registry name (e.g. ilwebshops.azurecr.io/infinitaslearning)',
+      default : '',
     }]).then(function (_answers) {
       this.props = _answers;
       this.props.components = ['app', 'config', 'logging', 'express', 'routes'];
