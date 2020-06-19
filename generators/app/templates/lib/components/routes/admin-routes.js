@@ -3,7 +3,6 @@ const expressJSDocSwagger = require('express-jsdoc-swagger');
 module.exports = () => {
   const start = async ({ manifest = {}, app, config }) => {
     const { swaggerOptions } = config;
-    const expressSwagger = expressSwaggerGenerator(app);
     expressJSDocSwagger(app)(swaggerOptions);
 
     /**
