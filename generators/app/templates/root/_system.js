@@ -4,7 +4,8 @@ const { join } = require('path');
 
 module.exports = () =>
   new System({ name: '<%= name %>' })
-  .add('metrics', initMetrics()) // metrics need initialising before systems related to connections start
+  // metrics need initialising before systems related to connections start
+  .add('metrics', initMetrics())
   .dependsOn('config')
   .bootstrap(join(__dirname, 'components'));
 

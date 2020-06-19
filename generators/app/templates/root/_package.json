@@ -10,7 +10,6 @@
     "test": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --reporters=default",
     "lint": "eslint .",
     "manifest": "node_modules/make-manifest/bin/make-manifest",
-    "qa": "npm run lint && npm run test",
     "postinstall": "node_modules/.bin/eslint . --fix"
   },
   "devDependencies": {
@@ -26,7 +25,6 @@
     "jest-config": "^25.4.0",
     "jest-junit": "^10.0.0",
     "make-manifest": "^1.0.1",
-    "sinon": "^7.3.2",
     "supertest": "^3.0.0"
   },
   "dependencies": {
