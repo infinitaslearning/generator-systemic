@@ -14,7 +14,7 @@ describe('Sample unit tests', ()=>{
         metricsSpy = spy(mocks.metrics, 'trackMetric');
     });
     afterEach(()=>{
-		metricsSpy.restore();
+    metricsSpy.restore();
     });
     it('Sample case', ()=>{
         //Do stuff here with mocks
