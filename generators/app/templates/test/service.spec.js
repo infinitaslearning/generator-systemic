@@ -6,18 +6,21 @@ describe('Service Tests', () => {
   let request;
   const sys = system();
 
-  before(async () => {
+  beforeEach(async () => {
     const { app } = await sys.start();
     request = supertest(app);
   });
 
-  after(() => sys.stop());
+  afterEach(async () => {
+    await sys.stop();
+  });
+
 
   it('returns manifest', () =>
     request
       .get('/__/manifest')
       .expect(200)
       .then(response => {
-        expect(response.headers['content-type']).to.equal('application/json; charset=utf-8');
+        expect(response.headers['content-type']).toEqual('application/json; charset=utf-8');
       }));
 });

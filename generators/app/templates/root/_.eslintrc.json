@@ -6,10 +6,11 @@
     "ecmaVersion": 2018
   },
   "env": {
-    "mocha": true,
+    "jest": true,
     "es6": true,
     "node": true
   },
+  "plugins": ["jest"],
   "rules": {
     "indent": 2,
     "no-tabs": 0,
