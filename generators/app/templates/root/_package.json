@@ -9,11 +9,10 @@
     "test:report": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --coverage",
     "test": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --reporters=default",
     "lint": "cross-env eslint .",
-    "manifest": "node_modules/make-manifest/bin/make-manifest",
-    "postinstall": "node_modules/.bin/eslint . --fix"
+    "manifest": "node_modules/make-manifest/bin/make-manifest"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^8.3.4",
     "chai": "^4.2.0",
     "eslint": "^4.19.1",
