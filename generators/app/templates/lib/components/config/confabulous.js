@@ -12,10 +12,10 @@ module.exports = ({ confabulous } = {}) => {
         loaders.require({
           path: path.join(process.cwd(), 'config', `${process.env.SERVICE_ENV}.js`),
           mandatory: false,
-        })
+        }),
       )
       .add(() =>
-        loaders.require({ path: path.join(process.cwd(), 'secrets', 'secrets.json'), watch: true, mandatory: false })
+        loaders.require({ path: path.join(process.cwd(), 'secrets', 'secrets.json'), watch: true, mandatory: false }),
       )
       .add(() => loaders.args())
       .on('loaded', cb)

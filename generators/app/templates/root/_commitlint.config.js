@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["@commitlint/config-conventional"]
+  extends: ['@commitlint/config-conventional'],
   /* Examples
    * chore: run tests on travis ci
    * fix(server): send cors headers

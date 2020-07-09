@@ -23,7 +23,6 @@ describe('Systemic basic services with no extra components', () => {
       assert.fileContent('config/default.js', /service/);
       assert.fileContent('config/default.js', /transport: \'console\'/);
       assert.fileContent('config/default.js', /swaggerOptions/);
-      assert.fileContent('config/default.js', /swaggerDefinition/);
       assert.fileContent('config/local.js', /transport: \'console\'/);
       assert.noFileContent('config/prod.js', /logger/);
       assert.fileContent('config/test.js', /transport: null/);
