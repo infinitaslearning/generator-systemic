@@ -1,4 +1,3 @@
-const expect = require('expect.js');
 const system = require('../system');
 const supertest = require('supertest');
 
