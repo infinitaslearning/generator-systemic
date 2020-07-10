@@ -1,5 +1,5 @@
 {
-  "name": "@liber/generator-systemic",
+  "name": "@infinitas/generator-systemic",
   "version": "1.0.0",
   "description": "A generator for a systemic microservice",
   "homepage": "https://github.com/guidesmiths/systemic",
