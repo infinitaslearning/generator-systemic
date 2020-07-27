@@ -7,7 +7,7 @@
 First, install [Yeoman](http://yeoman.io) and generator-systemic using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
-# Intall yeoman command
+# Install yeoman
 npm install -g yo
 # We need to tell where the package is
 npm set registry https://pkgs.dev.azure.com/infinitas/_packaging/Infinitas/npm/registry/ 
