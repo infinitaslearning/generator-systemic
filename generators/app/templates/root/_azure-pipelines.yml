@@ -28,8 +28,8 @@ steps:
       ERROR_UP=$((docker-compose --file ./docker/cicd/docker-compose.yml up --force -d --build) 2>&1)
       sleep 10
       docker exec <%= name %> sh -c "npm run test:report" 2>&1
-      docker cp <%= name %>:/usr/src/app/test-results.xml ./
-      docker cp <%= name %>:/usr/src/app/coverage/lcov.info ./lcov.info
+      docker cp <%= name %>:/usr/src/app/test-reports/junit.xml ./
+      docker cp <%= name %>:/usr/src/app/test-reports/coverage/lcov.info ./lcov.info
       sed -i 's|SF:/usr/src/app/|SF:|g' lcov.info
 
       echo "docker compose down"                                                   
@@ -44,7 +44,7 @@ steps:
     displayName: 'test: publish report'
     inputs:
       testResultsFormat: 'JUnit'
-      testResultsFiles: '**/test-*.xml'
+      testResultsFiles: '**/junit.xml'
       failTaskOnFailedTests: true
 
   - task: SonarQubePrepare@4

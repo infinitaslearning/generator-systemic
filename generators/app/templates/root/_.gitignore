@@ -4,3 +4,4 @@ manifest.json
 .nyc_output
 coverage
 test-results.xml
+test-reports
