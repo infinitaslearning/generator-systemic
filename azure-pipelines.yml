@@ -1,3 +1,8 @@
+trigger:
+  - master
+
+pr: none
+
 pool:
   name: Hosted Ubuntu 1604
   demands: npm
@@ -11,13 +16,6 @@ steps:
     customCommand: ci
     customRegistry: useFeed
     customFeed: '445bf733-2596-4e3d-a319-a70892d2bea9'
-
-- task: Npm@1
-  displayName: 'npm prepublish'
-  inputs:
-    command: custom
-    verbose: false
-    customCommand: 'run test'
 
 - task: Npm@1
   displayName: 'npm versioning'
