@@ -23,7 +23,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "lodash": "^4.17.2",
+    "lodash": "^4.17.20",
     "require-all": "^2.1.0",
     "yeoman-generator": "^0.23.0",
     "yosay": "^1.0.0"
