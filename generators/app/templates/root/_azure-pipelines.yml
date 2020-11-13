@@ -32,12 +32,12 @@ steps:
       docker cp <%= name %>:/usr/src/app/test-reports/coverage/lcov.info ./lcov.info
       sed -i 's|SF:/usr/src/app/|SF:|g' lcov.info
 
-      echo "docker compose down"                                                   
+      echo "docker compose down"
       ERROR_DOWN=$((docker-compose --file ./docker/cicd/docker-compose.yml down) 2>&1)
 
       echo "ERROR_UP=$ERROR_UP"
       echo "ERROR_DOWN=$ERROR_DOWN"
-    failOnStderr: true                        
+    failOnStderr: true
     displayName: 'test: execute'
 
   - task: PublishTestResults@2
@@ -77,7 +77,7 @@ steps:
   - task: Docker@2
     displayName: 'docker: push image'
     inputs:
-      containerRegistry: 'Docker Registry'
+      containerRegistry: 'ACR Connection'
       repository:  $(Build.Repository.Name)
       Dockerfile: Dockerfile
       tags: |
