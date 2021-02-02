@@ -1,0 +1,8 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "recommendations": [
+        "dbaeumer.vscode-eslint"
+    ]
+}

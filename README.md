@@ -25,6 +25,15 @@ cd my-service
 yo @infinitas/systemic
 ```
 
+## Development
+
+```bash
+# Pack the current project modifications
+npm pack
+# Install the local modified package
+npm i -g infinitas-generator-systemic-1.0.0.tgz
+```
+
 ## What you can find in this generator
 
 - [Systemic framework](https://www.npmjs.com/package/systemic) - A minimal dependency injection library.

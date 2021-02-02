@@ -1,4 +1,4 @@
-FROM node:12.18.2-alpine
+FROM node:14.15.4-alpine3.12
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -9,7 +9,7 @@ COPY .npmrc package*.json ./
 # In order to run node alpine image avoiding Python error
 RUN apk --no-cache add --virtual builds-deps build-base python
 
-RUN npm install
+RUN npm install --quiet
 
 # Bundle app source
 COPY . .
