@@ -6,8 +6,11 @@
   "scripts": {
     "local": "SERVICE_ENV=local node index.js",
     "start": "node index.js",
-    "test:report": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --coverage",
     "test": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --reporters=default",
+    "test:report": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --coverage",
+    "test:debug:error": "DEBUG=error-handler-module npm run test",
+    "test:verbose": "npm run test -- --verbose",
+    "test:verbose:debug:error": "DEBUG=error-handler-module npm run test:verbose",
     "lint": "eslint .",
     "manifest": "node_modules/make-manifest/bin/make-manifest"
   },
