@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 COPY .npmrc package*.json ./
 
 # In order to run node alpine image avoiding Python error
-RUN apk --no-cache add --virtual builds-deps build-base python
+RUN apk --no-cache add --virtual builds-deps build-base python3
 
 RUN npm install --quiet
 
